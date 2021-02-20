@@ -1,0 +1,33 @@
+/* START HEADER RESPONSIVE CODE*/
+@media  only screen and (max-width: 992px) {
+  .navbar-nav.navbar-center {
+      position: relative;
+      left: 50%;
+ }
+
+  .input-group {
+    padding-bottom: 20px;
+    padding-top: 5px;
+  }
+	
+header .fixed-align {
+	margin-top: 0px;
+}
+header .correct-align {
+	margin-top: 0px;
+}
+}
+/* END HEADER RESPONSIVE CODE*/
+
+
+
+
+/* START NEXT TOUR SECTION */
+@media  only screen and (max-width: 640px) {
+	
+#next-tour-section .count-bg {
+	min-height: 150px;
+}
+}
+/* END NEXT TOUR SECTION */
+

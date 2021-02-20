@@ -1,0 +1,404 @@
+/*BASIC SETTINGS*/
+html {
+	scroll-behavior: smooth;
+}
+
+body {
+	color: black;
+	font-size: 16px;
+	background: white;
+}
+
+.divider {
+	width: 80px;
+	height: 4px;
+	border-radius: 10px;
+	background: #BA0000;
+	margin: auto;
+	margin-bottom: 10px;
+}
+
+.active {
+	border-bottom: 2px solid  #FF5200;
+	color: #FFFFFF;
+}
+
+/* START HEADER-SECTION */
+header {
+	padding: 10px;
+	background: #BA0000;
+	z-index: 99999;
+	position: relative;
+}
+
+header .fixed-align {
+	margin-top: -15px;
+}
+
+header .correct-align {
+	margin-top: -4px;
+}
+
+.navbar-nav.navbar-center {
+	position: absolute;
+	left: 50%;
+	-webkit-transform: translatex(-50%);
+	transform: translatex(-50%);
+}
+
+header ul li .active-color {
+	border-bottom: 2px solid #FF4900;
+	padding-left: 5px;
+}
+
+header .nav-item {
+	margin-left: 8px;
+	color: #000000;
+}
+
+header .nav-link:hover {
+	color: #000000;
+	border-bottom: 2px solid #FF4900;
+}
+
+header .fa {
+	font-size: 20px;
+	color: #FF4900;
+}
+
+header .navbar button {
+	outline: none;
+}
+/* END HEADER-SECTION */
+
+
+/*START CAROUSE SLIDER */
+.carousel-inner img {
+	width: 100%;
+	height: 100%;
+}
+/*END CAROUSE SLIDER */
+
+
+/* START TOURIST PLACE SECTION */
+#tourist-place-section {
+	background: #ea8b8b;
+	margin-top: -50px;
+	position: relative;
+}
+
+#tourist-place-section .wave {
+	position: absolute;
+}
+
+#tourist-place-section card img {
+	height: 400px;
+}
+/* END TOURIST PLACE SECTION */
+
+
+/* START OUR SERVICE SECTION */
+#our-service-section h2 {
+	color: #BA0000;
+}
+
+#our-service-section h4 {
+	color: #BA0000;
+}
+
+#our-service-section ul {
+	list-style: none;
+}
+
+#our-service-section ul li {
+	font-size: 20px;
+}
+
+#our-service-section ul li::before {
+	content: "\2022";
+	color: red;
+	font-weight: bold;
+	display: inline-block;
+	width: 2em;
+	margin-left: -2em;
+}
+/* END OUR SERVICE SECTION */
+
+
+/* START TOURIST GUIDE SECTION */
+#tourist-guide-section {
+	background: #FF7B7B;
+}
+
+.flip-card {
+	background-color: transparent;
+	width: 100%;
+	height: 320px;
+	-webkit-perspective: 1000px;
+	perspective: 1000px;
+}
+
+.flip-card .flip-card-back .socialIcon a {
+	padding: 10px 15px;
+	margin: 4px;
+	text-decoration: none;
+	background: #ffffff;
+	border-radius: 50%;
+}
+
+.flip-card .flip-card-back .socialIcon a:hover i {
+	color: #BA0000;
+	-webkit-transition: 1s;
+	transition: 1s;
+	-webkit-transform: scale(1.3);
+	transform: scale(1.3);
+}
+
+.flip-card-inner {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	text-align: center;
+	-webkit-transition: -webkit-transform 0.6s;
+	transition: -webkit-transform 0.6s;
+	transition: transform 0.6s;
+	transition: transform 0.6s, -webkit-transform 0.6s;
+	-webkit-transform-style: preserve-3d;
+	transform-style: preserve-3d;
+	-webkit-box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+	box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+
+.flip-card:hover .flip-card-inner {
+	-webkit-transform: rotateY(180deg);
+	transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+}
+
+.flip-card-front {
+	color: black;
+}
+
+.flip-card-back {
+	background-color: #BA0000;
+	color: white;
+	-webkit-transform: rotateY(180deg);
+	transform: rotateY(180deg);
+}
+/* END TOURIST GUIDE SECTION */
+
+
+/* START VIDEO SECTION */
+#video-section .video-img {
+	background: -webkit-gradient(linear,left top, left bottom,from(rgba(255, 0, 0, 0.63)),to(rgba(128, 0, 84, 0.19))), url(../img/itali.jpg);
+	background: linear-gradient(rgba(255, 0, 0, 0.63),rgba(128, 0, 84, 0.19)), url(../img/itali.jpg);
+	background-size: cover;
+	background-position: center center;
+	background-repeat: no-repeat;
+	height: 250px;
+}
+
+#video-section:hover .video-img svg {
+	-webkit-transform: rotate(360deg);
+	transform: rotate(360deg);
+	-webkit-transition: 1s ease-in;
+	transition: 1s ease-in;
+}
+/* END VIDEO SECTION */
+
+
+/* START NEXT TOUR SECTION */
+#next-tour-section .count-bg {
+	background: url(../img/light.png);
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center center;
+	width: 100%;
+	min-height: 230px;
+}
+/* END NEXT TOUR SECTION */
+
+/* START CURSOR ANIMATION */
+.button {
+	transition: transform .3s cubic-bezier(.175,.885,.32,1.275), bottom .3s cubic-bezier(.175,.885,.32,1.275), background-position 3s cubic-bezier(.455,.03,.515,.955), -webkit-transform .3s cubic-bezier(.175,.885,.32,1.275);
+}
+
+.button, .button .btn-secondary {
+	background-position: 0 50%;
+	bottom: 0;
+}
+
+.button .btn-secondary {
+	left: 0;
+	width: 100%;
+	position: absolute;
+	-webkit-filter: blur(1rem);
+	filter: blur(1rem);
+	opacity: .65;
+	z-index: -1;
+	-webkit-transform: scale3d(.85, .85, 1);
+	transform: scale3d(.85, .85, 1);
+	transition: transform .3s cubic-bezier(.175,.885,.32,1.275), filter .3s cubic-bezier(.175,.885,.32,1.275), bottom .3s cubic-bezier(.175,.885,.32,1.275), background-position 3s cubic-bezier(.455,.03,.515,.955), -webkit-transform .3s cubic-bezier(.175,.885,.32,1.275), -webkit-filter .3s cubic-bezier(.175,.885,.32,1.275);
+}
+
+.button:focus {
+	outline: none;
+}
+
+.button:hover {
+	-webkit-transform: scale3d(1.1, 1.1, 1);
+	transform: scale3d(1.1, 1.1, 1);
+	background-position: 100% 50%;
+	outline: none;
+	bottom: 2px;
+}
+
+.btn-secondary, .button:hover .btn-secondary {
+	background-position: 100% 50%;
+	-webkit-filter: blur(1.6rem);
+	filter: blur(1.6rem);
+	bottom: -5px;
+}
+
+.cursor {
+	position: fixed;
+	width: 70px;
+	height: 70px;
+	border-radius: 50%;
+	background-color: rgba(186, 0, 0, 0.6);
+	pointer-events: none;
+	mix-blend-mode: difference;
+	-webkit-transition: -webkit-transform .3s cubic-bezier(.175, .885, .32, 1.175);
+	transition: -webkit-transform .3s cubic-bezier(.175, .885, .32, 1.175);
+	transition: transform .3s cubic-bezier(.175, .885, .32, 1.175);
+	transition: transform .3s cubic-bezier(.175, .885, .32, 1.175), -webkit-transform .3s cubic-bezier(.175, .885, .32, 1.175);
+	z-index: 99999999;
+}
+
+span.ripple {
+	position: absolute;
+	border-radius: 50%;
+	-webkit-transform: scale(0);
+	transform: scale(0);
+	-webkit-animation: ripple 600ms linear;
+	animation: ripple 600ms linear;
+	background-color: rgba(255, 255, 255, .85);
+}
+
+@-webkit-keyframes ripple {
+	to {
+		-webkit-transform: scale(.65);
+		transform: scale(.65);
+		opacity: 0;
+	}
+}
+
+@keyframes ripple {
+	to {
+		-webkit-transform: scale(.65);
+		transform: scale(.65);
+		opacity: 0;
+	}
+}
+/* END CURSOR ANIMATION */
+
+/* START OUR MAP AND BOOKING SECTION */
+#my-map-section {
+	background: #FF7B7B;
+}
+/* END OUR MAP AND BOOKING SECTION */
+
+/* START FOOTER TOP SECTION */
+#footer-top-section {
+	margin-bottom: -8px;
+	background: rgba(255, 255, 255, 0.418);
+	color: rgba(0, 0, 0, 0.7);
+}
+
+#footer-top-section .social-icons a {
+	margin-right: 14px;
+	text-decoration: none;
+	color: #ff0000;
+	-webkit-transition: 0.5s;
+	transition: 0.5s;
+}
+
+#footer-top-section .social-icons a i {
+	font-size: 20px;
+}
+
+#footer-top-section .social-icons a:hover {
+	color: #020000;
+}
+
+#footer-top-section .contact-info .fa {
+	color: #ff1100;
+	font-size: 16px;
+}
+
+#footer-top-section .inner-link a {
+	display: block;
+	text-decoration: none;
+	border-bottom: 1px dotted;
+	margin-bottom: 9px;
+	color: rgba(0, 0, 0, 0.877);
+	-webkit-transition: 0.5s;
+	transition: 0.5s;
+	font-size: 18px;
+}
+
+#footer-top-section .inner-link a .fas {
+	font-size: 10px;
+}
+
+#footer-top-section .inner-link a:hover {
+	color: #ee0303;
+}
+
+#footer-top-section .recent-post .box-design {
+	background: #FF7B7B;
+	padding: 6px;
+	border-radius: 5px;
+}
+
+#footer-top-section .recent-post a {
+	color: rgba(255, 255, 255, 0.7);
+	text-decoration: none;
+	-webkit-transition: 0.5s;
+	transition: 0.5s;
+}
+
+#footer-top-section .recent-post a:hover {
+	color: #FF5200;
+}
+
+#footer-top-section h6 {
+	font-size: 14px;
+}
+/* END FOOTER TOP SECTION */
+
+/* START FOOTER SECTION */
+#footer-section {
+	background: rgba(0, 0, 0, 0.9);
+	color: rgba(255, 255, 255, 0.7);
+	margin-top: -34px;
+}
+
+#footer-section a {
+	margin-left: 8px;
+	font-size: 17px;
+	color: rgba(208, 40, 40, 0.86);
+	text-decoration: none;
+}
+
+#footer-section a:hover {
+	color: #BA0000;
+}
+/* END FOOTER SECTION */
